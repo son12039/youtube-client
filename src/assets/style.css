@@ -1,0 +1,177 @@
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  z-index: 1;
+}
+.header-start {
+  display: flex;
+}
+.header-start i {
+  font-size: 20px;
+  margin: 20px;
+}
+.header-start a {
+  padding: 20px 10px;
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-center input {
+  display: none;
+}
+.header-center button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.header-end {
+  display: flex;
+  margin-right: 20px;
+}
+.header-end button {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+main {
+  padding-top: 60px;
+  display: flex;
+}
+main aside {
+  display: none;
+  position: fixed;
+  width: 55px;
+}
+main aside a {
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main aside a i {
+  margin-bottom: 5px;
+}
+main aside a span {
+  font-size: 0.8rem;
+}
+main nav {
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+  background: white;
+  z-index: 1;
+}
+main nav a {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+main nav a.active {
+  background-color: #000;
+  color: #fff;
+}
+main section {
+  padding-top: 45px;
+  display: flex;
+}
+/* 반응형 */
+@media screen and (min-width: 665px) {
+  .header-center {
+    justify-content: center;
+  }
+  .header-center input {
+    display: block;
+    padding: 10px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #ddd;
+    width: 30%;
+    max-width: 500px;
+  }
+  .header-center button {
+    border: 1px solid #ddd;
+    border-left: none;
+    padding: 6px 12px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  main aside {
+    display: block;
+  }
+  main .main-content {
+    padding-left: 55px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header-center input {
+    width: 90%;
+  }
+}
+
+/* section - video */
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.video-card {
+  width: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+.video-card:hover .video-main video {
+  display: block;
+}
+.video-card:hover .video-main img {
+  display: none;
+}
+
+.video-main {
+  position: relative;
+}
+.video-main video,
+.video-main img {
+  width: 100%;
+  position: absolute;
+}
+.video-main img {
+  border-radius: 10px;
+}
+.video-main video {
+  display: none;
+}
+.video-info {
+  padding-top: 200px;
+  display: flex;
+  line-height: 1.2;
+}
+.video-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.video-info h2 {
+  font-weight: bold;
+}
+.video-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
