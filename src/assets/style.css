@@ -1,46 +1,3 @@
-header {
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
-  z-index: 1;
-}
-.header-start {
-  display: flex;
-}
-.header-start i {
-  font-size: 20px;
-  margin: 20px;
-}
-.header-start a {
-  padding: 20px 10px;
-}
-.header-center {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.header-center input {
-  display: none;
-}
-.header-center button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-}
-.header-end {
-  display: flex;
-  margin-right: 20px;
-}
-.header-end button {
-  background: none;
-  border: none;
-  font-size: 20px;
-}
 main {
   padding-top: 60px;
   display: flex;
@@ -87,28 +44,6 @@ main section {
   padding-top: 45px;
   display: flex;
 }
-/* 반응형 */
-@media screen and (min-width: 665px) {
-  .header-center {
-    justify-content: center;
-  }
-  .header-center input {
-    display: block;
-    padding: 10px 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border: 1px solid #ddd;
-    width: 30%;
-    max-width: 500px;
-  }
-  .header-center button {
-    border: 1px solid #ddd;
-    border-left: none;
-    padding: 6px 12px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-}
 
 @media screen and (min-width: 880px) {
   main aside {
@@ -116,12 +51,6 @@ main section {
   }
   main .main-content {
     padding-left: 55px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .header-center input {
-    width: 90%;
   }
 }
 

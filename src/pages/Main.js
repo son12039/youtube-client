@@ -1,35 +1,27 @@
 import "../assets/style.css";
-import { FaHouse } from "react-icons/fa6";
+import { FaHouseChimney } from "react-icons/fa6";
 import { FaFolder } from "react-icons/fa";
 import { getVideos } from "../api/video";
-import { useState, useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
+
 const Main = () => {
-  const [videos, setVideos] = useState([]);
-  const videoAPI = async () => {
-    const result = await getVideos();
-    setVideos(result.data);
-  };
-  useEffect(() => {
-    //탄생시점
-    videoAPI();
-  }, []);
+  const { videos } = useOutletContext();
+
   return (
     <main>
       <aside>
         <a href="">
-          <FaHouse />
-          <span>홈</span>
+          <FaHouseChimney /> <span>홈</span>
         </a>
         <a href="">
-          <FaFolder />
-          <span>구독</span>
+          <FaFolder /> <span>구독</span>
         </a>
       </aside>
       <div className="main-content">
         <nav>
           <a href="" className="active">
             전체
-          </a>
+          </a>{" "}
           <a href="">음악</a> <a href="">게임</a>
           <a href="">뉴스</a> <a href="">라이브</a> <a href="">야생생물</a>
         </nav>
@@ -47,10 +39,10 @@ const Main = () => {
               <div className="video-info">
                 <img src={video.channel.channelImg} />
                 <div className="video-desc">
-                  <h2>${video.videoTitle}</h2>
-                  <p>${video.channel.channelName}</p>
+                  <h2>{video.videoTitle}</h2>
+                  <p>{video.channel.channelName}</p>
                   <p className="video-meta" data-video-date={video.videoDate}>
-                    조회수 ${video.videoCount}회ㆍ
+                    조회수 {video.videoCount}회ㆍ
                     <span className="video-date"></span>
                   </p>
                 </div>
