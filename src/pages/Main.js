@@ -9,7 +9,7 @@ const Main = () => {
 
   const scroll = () => {
     if (
-      window.innerHeight + document.documentElement.scrollTop >=
+      window.innerHeight + document.documentElement.scrollTop + 1 >=
       document.documentElement.offsetHeight
     ) {
       setPage((page) => page + 1);
