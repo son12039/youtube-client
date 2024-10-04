@@ -1,11 +1,27 @@
 import "../assets/style.css";
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaFolder } from "react-icons/fa";
-import { getVideos } from "../api/video";
 import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 
 const Main = () => {
-  const { videos } = useOutletContext();
+  const { videos, setPage } = useOutletContext();
+
+  const scroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop >=
+      document.documentElement.offsetHeight
+    ) {
+      setPage((page) => page + 1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  }, [setPage]);
 
   return (
     <main>
