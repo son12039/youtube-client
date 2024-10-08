@@ -8,7 +8,8 @@ import Modal from "./Modal";
 import { useAuth } from "../contexts/AuthContext";
 import { useTheme } from "../contexts/ThemeContext";
 import { GoSun } from "react-icons/go";
-import { FaMoon } from "react-icons/fa6";
+import { FaMoon } from "react-icons/fa";
+
 const StyledHeader = styled.header`
   position: fixed;
   background-color: white;
@@ -98,6 +99,7 @@ const Header = ({ onUpload, onSearch }) => {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [keyword, setKeyword] = useState("");
+
   const login = () => {
     // 로그인 페이지 이동
     navigate("/login");

@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { addVideo } from "../api/video";
+
 const Modal = ({ isOpen, onClose, onUpload }) => {
   const [video, setVideo] = useState({
     videoFile: null,
     imageFile: null,
     videoTitle: "",
     videoDesc: "",
-    channelCode: 10,
+    channelCode: 2,
   });
-
   if (!isOpen) return null;
 
   const upload = async () => {

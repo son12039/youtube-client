@@ -20,3 +20,8 @@ export const addVideo = async (data) => {
     },
   });
 };
+
+// getVideo : http://localhost:8080/api/video/2
+export const getVideo = async (videoCode) => {
+  return await instance.get(`video/${videoCode}`);
+};

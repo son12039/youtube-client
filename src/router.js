@@ -4,11 +4,17 @@ import Main from "./pages/Main";
 import Login from "./pages/member/Login";
 import Signup from "./pages/member/Signup";
 import LoginSuccess from "./components/LoginSuccess";
+import Count from "./components/Count";
+import Detail from "./pages/video/Detail";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [{ index: true, element: <Main /> }],
+    children: [
+      { index: true, element: <Main /> },
+      { path: "video/:videoCode", element: <Detail /> },
+    ],
   },
   {
     path: "/login",
@@ -21,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/login-success",
     element: <LoginSuccess />,
+  },
+  {
+    path: "/count",
+    element: <Count />,
   },
 ]);
 

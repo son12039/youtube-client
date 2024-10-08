@@ -8,7 +8,7 @@ import { createContext, useState, useContext } from "react";
 const AuthContext = createContext();
 
 // 2. Context.Provider 기능을 사용해야 한다.
-// Provider를 통해 고르인 상태와 로그인/로그아웃 기능 제공
+// Provider를 통해 로그인 상태와 로그인/로그아웃 기능 제공
 export const AuthProvider = ({ children }) => {
   // 로그인 상태 - token 유무
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("token");
     setToken(null);
   };
+
   return (
     <AuthContext.Provider value={{ token, login, logout }}>
       {children}
