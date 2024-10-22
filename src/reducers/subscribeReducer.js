@@ -22,15 +22,11 @@ export const subCount = async (dispatch, channelCode) => {
 };
 
 export const fetchSub = async (dispatch, channelCode) => {
-  try {
-    const response = await getSub(channelCode);
-    if (response.data !== "") {
-      dispatch({ type: "FETCH_SUBSCRIBE", payload: response.data });
-    } else {
-      dispatch({ type: "FETCH_SUBSCRIBE_ERROR" });
-    }
-  } catch (error) {
-    localStorage.removeItem("token");
+  const response = await getSub(channelCode);
+  if (response.data !== "") {
+    dispatch({ type: "FETCH_SUBSCRIBE", payload: response.data });
+  } else {
+    dispatch({ type: "FETCH_SUBSCRIBE_ERROR" });
   }
 };
 

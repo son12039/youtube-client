@@ -53,3 +53,60 @@ main.detail {
 .video-list img {
   width: 100%;
 }
+.video-detail-info {
+  margin: 30px 0;
+}
+.comment-add {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+}
+.comment-add:focus {
+  outline: none;
+  border-color: #999;
+}
+.comment-add-status {
+  display: flex;
+  justify-content: flex-end;
+}
+.comment-add-status button {
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 5px;
+}
+.comment-list {
+  margin: 20px 0;
+}
+.comment-content h4 {
+  font-weight: bold;
+}
+.comment-content p {
+  margin: 10px 0;
+}
+.comment-content > button {
+  color: #065fd4;
+  display: block;
+}
+.comment-content input {
+  margin-left: 30px;
+  border-bottom: 1px solid #ddd;
+  width: 90%;
+  padding: 10px;
+}
+.comment-content input:focus {
+  outline: none;
+  border-color: #999;
+}
+.reply-add-status {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  margin-left: 30px;
+}
+.reply-add-status button {
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px 5px;
+}

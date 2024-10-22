@@ -6,7 +6,7 @@ import Signup from "./pages/member/Signup";
 import LoginSuccess from "./components/LoginSuccess";
 import Count from "./components/Count";
 import Detail from "./pages/video/Detail";
-
+import Video from "./pages/video/Video.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/count",
     element: <Count />,
+  },
+  {
+    path: "/detail/:videoCode",
+    element: <Video />,
   },
 ]);
 

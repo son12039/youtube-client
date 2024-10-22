@@ -17,7 +17,7 @@ const Login = () => {
       if (result.status === 200) {
         authLogin(result.data);
         alert("로그인 성공!");
-        navigate("/");
+        window.location.href = "/";
       }
     } catch {
       alert("로그인 실패!");
